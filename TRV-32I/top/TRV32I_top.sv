@@ -9,6 +9,7 @@ module TRV32I_top #(
 
     wire [B_WIDTH-1:0] mem_addr;
 
+
     TRV32I_core #(
         .B_WIDTH(B_WIDTH)
     ) TRV32I_core (
