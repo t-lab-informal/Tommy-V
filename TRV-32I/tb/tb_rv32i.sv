@@ -9,7 +9,7 @@ module tb_TRV32I;
     logic [B_WIDTH-1:0] bus_read_data, bus_write_data;
 
     //connect topmodule
-    TRV32I TRV32I(.clk(clk), .rst(rst), .inst(inst),
+    TRV32I_top TRV32I_top(.clk(clk), .rst(rst), .inst(inst),
                     .bus_read_data(bus_read_data), .bus_read_en(bus_read_en),
                     .bus_write_data(bus_write_data), .bus_write_en(bus_write_en));
     
