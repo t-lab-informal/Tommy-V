@@ -3,16 +3,17 @@
 module tb_TRV32I;
     parameter B_WIDTH = 32;
 
-    logic clk, rst;
-    logic [31:0] pc, inst;
-    logic bus_read_en, bus_write_en;
-    logic [B_WIDTH-1:0] bus_read_data, bus_write_data;
+    logic           clk, rst;
+    logic   [31:0]  pc, inst;
+    logic           mem_read_en, mem_write_en;
+    logic [B_WIDTH-1:0] mem_data;
 
     //connect topmodule
-    TRV32I_top TRV32I_top(.clk(clk), .rst(rst), .inst(inst),
-                    .bus_read_data(bus_read_data), .bus_read_en(bus_read_en),
-                    .bus_write_data(bus_write_data), .bus_write_en(bus_write_en));
-    
+    TRV32I_top TRV32I_top(
+        .clk(clk), .rst(rst), .pc(pc), .inst(inst),
+        .mem_data(mem_data), .mem_read_en(mem_read_en), .mem_write_en(mem_write_en)
+    );
+
     //test bench start
     initial begin
             clk = 1'b1;
