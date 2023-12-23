@@ -37,7 +37,7 @@ module mem_data #(
         if (~mem_read_en & mem_write_en == 1'b1) begin
             // mem_array[mem_addr] <= d_in;
             for (int i = (B_WIDTH/8)-1; i>=0; i--) begin
-                if (write_byte_en[i]) mem_array[mem_addr][i*8+:8] <= d_in;
+                if (write_byte_en[i]) mem_array[mem_addr][i*8+:8] <= d_in[i*8+:8];
             end
         end
     end
