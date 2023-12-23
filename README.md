@@ -4,7 +4,7 @@ T-Lab's RISC-V Processor<br>
 
 ## About Tommy-V
 T-Lab(仮名)のOB達が突然「RISC-Vプロセッサを作ってみよう」という気になり発生したプロジェクト<br>
-
+Vivado 2023.2で論理合成・シミュレーション実行(予定)
 
 ## Strongly Recommend
 - only one module per file
