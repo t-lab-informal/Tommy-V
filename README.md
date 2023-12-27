@@ -8,7 +8,7 @@ Vivado 2023.2で論理合成・シミュレーション実行(予定)
 
 ## Strongly Recommend
 - only one module per file
-- comments are in English only - to avoid compile errors
+- files' name, path and comments are in English only - to avoid compile errors
 
 
 ## TRV-32I
