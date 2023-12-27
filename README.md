@@ -12,7 +12,7 @@ Vivado 2023.2で論理合成・シミュレーション実行(予定)
 
 
 ## TRV-32I
-RV32I Single Cycle Processor<br>
+RV32I(M) Single Cycle Processor<br>
 トップモジュールから追加中(20231223)<br>
 
 ## TRV-32GC
