@@ -7,8 +7,9 @@ T-Lab(仮名)のOB達が突然「RISC-Vプロセッサを作ってみよう」�
 Vivado 2023.2で論理合成・シミュレーション実行(予定)
 
 ## Strongly Recommend
-- only one module per file
-- files' name, path and comments are in English only - to avoid compile errors
+- Only one module per file.
+- Files' name, path and comments are in English only. - to avoid verilog compile errors
+  - exclude files in "tools"
 
 
 ## TRV-32I
