@@ -9,7 +9,6 @@ module mem_data #(
     inout [B_WIDTH-1:0]     mem_data;
 );
 
-    //mem description
     logic [B_WIDTH-1:0] d_in;
     logic [B_WIDTH-1:0] q_fetch;
 
