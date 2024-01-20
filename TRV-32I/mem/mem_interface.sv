@@ -11,15 +11,16 @@ module mem_interface #(
     inout  [B_WIDTH-1:0]        mem_data;
 );
 
-    //port connect
     mem_inst #(
-       .B_WIDTH(B_WIDTH)
+       .B_WIDTH(B_WIDTH),
+       .MEM_SIZE(MEM_SIZE)
     ) mem_inst (
-        .clk(clk), .rst(rst), .pc({'b0,pc[B_WIDTH-2:0]}), .inst(inst)
+        .clk(clk), .rst(rst), .pc(pc), .inst(inst)
     );
 
     mem_data #(
-       .B_WIDTH(B_WIDTH)
+       .B_WIDTH(B_WIDTH),
+       .MEM_SIZE(MEM_SIZE)
     ) mem_data (
         .clk(clk), .rst(rst),
         .mem_addr(mem_addr), .mem_data(mem_data),

@@ -1,3 +1,6 @@
+`include "config.svh"
+`include "defines.svh"
+
 module TRV32I_core (
     input           clk, rst;
     input   [31:0]  inst;
