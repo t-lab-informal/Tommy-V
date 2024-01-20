@@ -1,3 +1,6 @@
+`include "config.svh"
+`include "defines.svh"
+
 module TRV32I_top #(
     parameter B_WIDTH = 32;
     parameter MEM_SIZE = 32;
