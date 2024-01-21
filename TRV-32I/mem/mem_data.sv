@@ -10,26 +10,26 @@ module mem_data #(
 );
 
     logic [B_WIDTH-1:0] d_in;
-    logic [B_WIDTH-1:0] q_fetch;
+    logic [B_WIDTH-1:0] mem_fetch;
 
     logic [2**MEM_SIZE-1:0][B_WIDTH-1:0] mem_array;
 
 
     always_comb begin : readwrite_data_fetch
         //read
-        mem_data <= (mem_read_en & ~mem_write_en) ? mem_fetch : 32'hz;
+        mem_data <= (mem_read_en & ~mem_write_en) ? mem_fetch : 'hz;
         // if (mem_read_en & ~mem_write_en == 1'b1) begin
         //     mem_data <= mem_fetch;
         // end
 
         //write
-        d_in <= (~mem_read_en & mem_write_en) ? mem_data : 32'hz;
+        d_in <= (~mem_read_en & mem_write_en) ? mem_data : 'hz;
     end
 
     always_ff @( posedge clk ) begin : mem_read_write
         //read
         if (mem_read_en & ~mem_write_en == 1'b1) begin
-            q_fetch <= mem_array[mem_addr];
+            mem_fetch <= mem_array[mem_addr];
         end
 
         //write
